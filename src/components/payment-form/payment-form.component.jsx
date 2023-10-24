@@ -23,6 +23,8 @@ export const PaymentForm=()=>{
             method: "post",
             headers: {
               "Content-Type": "application/json",
+              'Access-Control-Allow-Origin':'*',
+            'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS',
             },
             body: JSON.stringify({ amount: amount * 100 }),
           }).then((res) => {
